@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SNAKE APPLE 2D</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            🐍 SNAKE APPLE <span>2D</span>
+        </div>
+
+        <button id="soundBtn" class="sound-btn">
+            🔊
+        </button>
+
+    </header>
+
+
+    <!-- STATUS GAME -->
+    <section class="hud">
+
+        <div class="box">
+            <small>LEVEL</small>
+            <strong id="level">1</strong>
+        </div>
+
+        <div class="box">
+            <small>SCORE</small>
+            <strong id="score">0</strong>
+        </div>
+
+        <div class="box">
+            <small>APPLE</small>
+            <strong id="apple">0</strong>
+        </div>
+
+        <div class="box">
+            <small>BEST</small>
+            <strong id="best">0</strong>
+        </div>
+
+    </section>
+
+
+    <!-- AREA GAME -->
+    <section class="game-card">
+
+        <div id="game"></div>
+
+    </section>
+
+
+    <!-- KONTROL HP -->
+    <section class="mobile-control">
+
+        <button data-direction="up">▲</button>
+
+        <div>
+            <button data-direction="left">◀</button>
+            <button data-direction="down">▼</button>
+            <button data-direction="right">▶</button>
+        </div>
+
+    </section>
+
+
+    <!-- BUTTON GAME -->
+    <section class="buttons">
+
+        <button id="startBtn" class="start">
+            ▶ MULAI GAME
+        </button>
+
+        <button id="pauseBtn">
+            ⏸ PAUSE
+        </button>
+
+        <button id="resetBtn">
+            🔄 RESET
+        </button>
+
+    </section>
+
+
+    <!-- PLAYER -->
+    <section class="player">
+
+        <h3>👤 Pemain</h3>
+
+        <div class="player-input">
+
+            <input
+                type="text"
+                id="playerName"
+                maxlength="20"
+                placeholder="Masukkan nama">
+
+            <button id="saveName">
+                Simpan
+            </button>
+
+        </div>
+
+        <p id="status">
+            Data game tersimpan otomatis.
+        </p>
+
+    </section>
+
+
+    <!-- CARA BERMAIN -->
+    <section class="help">
+
+        <h3>🎮 Cara Bermain</h3>
+
+        <p>
+            Gerakkan ular menggunakan tombol
+            <b>WASD</b>, <b>Arrow</b>, atau tombol HP.
+        </p>
+
+        <p>
+            🍎 Ambil apel untuk mendapatkan score.
+        </p>
+
+        <p>
+            ⚠️ Hindari duri dan 🧱 balok.
+        </p>
+
+        <p>
+            🌀 Masuk portal untuk naik level.
+        </p>
+
+    </section>
+
+</div>
+
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
